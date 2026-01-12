@@ -10,7 +10,6 @@ sources:
             data_tests:
               - unique
               - not_null
-
       - name: orders
         columns:
           - name: id
