@@ -1,0 +1,33 @@
+models:
+  - name: stg_stripe__payment
+    description: This model serves as a staging layer for Stripe payment data, transforming and renaming fields for consistency and ease of use in downstream analysis. It includes details about each payment transaction, such as the payment method, status, and amount, along with timestamps for when the payment was created and when the data was batched.
+    columns:
+      - name: payment_id
+        description: A unique identifier for each payment transaction.
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: The identifier for the order associated with the payment.
+        tests:
+          - not_null
+      - name: payment_method
+        description: The method used for the payment, such as credit card or bank transfer.
+        tests:
+          - not_null
+      - name: payment_status
+        description: The current status of the payment, indicating whether it is completed, pending, or failed.
+        tests:
+          - not_null
+      - name: amount
+        description: The total amount of the payment transaction.
+        tests:
+          - not_null
+      - name: created
+        description: The date when the payment was created.
+        tests:
+          - not_null
+      - name: _batched_at
+        description: The timestamp indicating when the data was last batched.
+        tests:
+          - not_null
