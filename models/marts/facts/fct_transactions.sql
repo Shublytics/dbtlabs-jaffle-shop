@@ -17,6 +17,7 @@ select
     country_code,
     local_currency_code,
     local_amount,
+    cvv_provided,
     exchange_rate,
     amount_usd,
     is_accepted,

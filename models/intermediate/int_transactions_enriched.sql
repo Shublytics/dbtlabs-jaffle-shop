@@ -14,6 +14,7 @@ calculation as (
         a.country_code,
         a.local_currency_code,
         a.local_amount,
+        a.cvv_provided,
         
         -- 1. Parse the string into JSON
         -- 2. Extract the rate for the specific currency

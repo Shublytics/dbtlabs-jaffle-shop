@@ -2,7 +2,7 @@
 -- Calculate and present the acceptance rate over time
 
 select 
-    transaction_at::date AS transaction_date,
+    date(transaction_at) AS transaction_date,
     concat(round(sum(is_accepted) * 100.0 / count(*), 2), '%') as acceptance_rate
 from {{ ref('fct_transactions') }}
 group by 1 
