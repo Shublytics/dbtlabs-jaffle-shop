@@ -1,0 +1,16 @@
+models:
+  - name: stg_globepay__chargeback
+    columns:
+      - name: external_payment_id
+        data_tests:
+          - unique
+          - not_null
+      - name: payment_source
+        data_tests:
+          - not_null
+      - name: is_reported
+        data_tests:
+          - not_null
+      - name: has_chargeback
+        data_tests:
+          - not_null

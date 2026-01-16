@@ -1,0 +1,5 @@
+seeds:
+  - name: globepay_acceptance_report
+    config:
+        delimiter: ";"
+        quote_columns: false
