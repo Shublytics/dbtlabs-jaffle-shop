@@ -8,5 +8,5 @@ select
     concat(
         round(sum(case when payment_state = 'declined' then 1 else 0 end) * 100.0 / count(*), 2),
         '%'
-    ) as decline_rate_volume
+    ) as decline_rate
 from {{ ref('fct_transactions') }}
